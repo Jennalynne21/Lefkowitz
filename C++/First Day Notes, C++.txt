@@ -1,0 +1,146 @@
+~Basics~
+Syntax: language (in C++ at the end of a line you need to put ;, etc.)
+Computer takes code and translates it into binary (0111011110, etc.)
+Computers are dumb... you need to tell them how to do everything
+Everything you do on a computer, someone wrote a code to make that possible
+Computers read line by line so you can't put too much on any one line
+namespace std is a "library" that gives you quicker access
+Library: a collection of functions and classes (i.e. math things like sine, cosine, tangent, etc.)
+
+Start codes like this:
+#include <iostream>
+using namespace std;
+
+void main () {
+(put everything in here;
+}
+Put system("PAUSE") when you're done
+
+~Variables~ 
+You can say x=10 in algebra and solve for variables... that works here too (a variable in programming  is like a "box" that stores data)
+There are...
+Integers: whole numbers only
+Double: decimal points
+Float: less precise than double-- don't use it 
+String: you have to include the string library (an array of characters)
+Bool: true or false (0 or 1... one means true, one means false)
+Char: a single character (i.e. a)
+Type name=value
+That is NOT an equal sign-- it means that value is assigned to name
+
+An example of using variables would look like this:
+
+#include <iostream>
+using namespace std;
+
+void main () {
+int x= 2;
+int y= 3;
+
+double n= 1.5;
+double p= 1.6;
+
+char letter= 'j';
+char letter2= 'l';
+
+cout << x*p << endl;
+cout << x + letter << endl;
+system("PAUSE");
+}
+ 
+Char is a letter... but it's a letter representation of a number
+a= 65, o=111... they all have unique values
+So when you add a number to a char, it is converted to its "ACI" number for the calculation
+
+#include <string> -- this is how you use strings
+it uses "double quotes", not 'single quotes'
+You can't add numerical values to strings
+
+cin>> (input)
+cout<< (output)
+
+You can put multiple variables in the output but only one per input-- you need to open another cin>> if you want to add more
+
+~Conditions~
+If
+Do-while
+For
+Switch
+
+If (condition)
+{
+do stuff
+}
+
+
+... a==1
+These two equal signs are "math" equals-- a is equal to 1...
+
+else 
+{
+do other stuff
+}
+
+If (this is true) {do this}
+else if (this is true) {do this}
+else {do this}
+Those are the specific conditions and "else" is the catch-all for failure 
+
+Operators for if statements--
+&& and
+II or 
+:= not equal
+== equal
+
+You can stack/nest "if else" statements, but if you have a lot of things to check for it gets messy... so we have "switch" statements
+Switch(variable)
+{
+case condition1:
+stuff
+break;
+case condition2;
+stuff
+break;
+default;
+stuff;
+break;
+
+The switch runs through this cases and finds which is true... if one is false it moves on, so "break" tells the computer that something is true, so
+the computer should do it and then move on instead of staying there infinitely
+If you don't have a default (which is an else statement), the computer just won't do anything
+
+-Loops-
+There are three kinds of loops:
+For
+While
+Do-while
+
+These are conditions, but they loop through something until a condition is false 
+For(inti=0; condition; i++ (++ is the same as 1=i+1)
+You don't need to name this i, but that's just the standard-- i doesn't have to be 0, either
+Say the computer reaches this line where i is 0 and we have a count that adds 1 to itself every time it goes through the loop
+At the beginning, the count is 0 (... ???), then when it loops back, the count is 1, it checks if i is still less than 10-- i is 1
+it keeps looping until i is 9, the less number less than 10; 
+
+While Loop
+While(condition)
+{
+stuff
+}
+i does not increment in its initialization-- this can create an infinite loop, which can be harmful for your computer if they take up space for no reason
+Computers (and games, etc.) do have infinite loops working, though, but they have reasons, so they are not harmful
+In a game, an infinite loop can be broken in three ways:
+Pausing (which is an infinite loop of its own)
+Dying (game over-- not just losing a life, because it can tell when you have more than 0)
+Turning your system off 
+... So you can leave a game on forever and you'll just stay in the same spot forever; just don't overheat the system 
+
+Do-While Loops
+do
+{
+stuff
+}
+while(condition1)
+So x will go through this loop once (or however many times) to check if it's true or not, then finish
+This is a pseudo-infinite loop used for "continue or not", asking if you want to play again (true) or not (false)
+
